@@ -24,45 +24,57 @@ void functionToCall(int x) {
 	printf("functionToCall called on %d", x);
 }
 
+struct location {
+	int latitude;
+	int longitude;
+} here;
 
 int main(void) {
 
-	 void (*pFunctionToCall)(int);
-	 pFunctionToCall = &functionToCall;
+	struct location there;
 
-	 pFunctionToCall(2);
-	 printf("\n\n");
+	here.latitude = 20;
+	here.longitude = 30;
+
+	there = here;
+	printf("The location of there is %dn, %de\n\n", there.latitude, there.longitude);
+
+	void (*pFunctionToCall)(int);
+	pFunctionToCall = &functionToCall;
+
+	pFunctionToCall(2);
+	printf("\n\n");
 
 
-	 printf("Now let's play with pointers.\n\n");
+	printf("Now let's play with pointers.\n\n");
 
-	 int x = 7, *px;
-	 px = &x;
-	 *px = x;
+	int x = 7, *px;
+	px = &x;
+	*px = x;
 
-	 printf("the memory address of x is %d\n", px);
-	 printf("x is %d\n", x);
-	 printf("x is %d\n", *px);
+	printf("the memory address of x is %d\n", px);
+	printf("x is %d\n", x);
+	printf("x is %d\n", *px);
 
-	 printf("\n\n");
+	printf("\n\n");
 
-	 int y = 10, *py = &y;
+	int y = 10, *py = &y;
 
-	 printf("Let's pass by reference and modify the value at that address! ");
-	 modifyVariable(&y);
-	 printf("%d\n", y);
+	printf("Let's pass by reference and modify the value at that address! ");
+	modifyVariable(&y);
+	printf("%d\n", y);
 
-	 printf("\n\nNow let's play with arrays.\n\n");
+	printf("\n\nNow let's play with arrays.\n\n");
 
-	 static int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	static int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
 
-	 int arraySize = sizeof(myArray) / sizeof(myArray[0]);
+	int arraySize = sizeof(myArray) / sizeof(myArray[0]);
 
-	 for (int i = 0; i < arraySize; i++) {
+	for (int i = 0; i < arraySize; i++) {
 		printf("%d ", myArray[i]);
-	 }
+	}
 
-	 printf("\n");
+	printf("\n");
 
 
 
