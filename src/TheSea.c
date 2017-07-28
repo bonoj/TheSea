@@ -13,6 +13,12 @@
 
 int main(void) {
 
+	int x = 5, y = 12, z;
+
+	z = x + y;
+
+	printf("%d + %d = %d\n", x, y, x + y);
+
 	char *p = "Hello World";
 
 	//puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
