@@ -34,8 +34,22 @@ int main(void) {
 
 	int y = 10, *py = &y;
 
+	printf("Let's pass by reference and modify the value at that address!");
 	modifyVariable(&y);
 	printf("%d\n", y);
+
+	printf("\n\nNow let's play with arrays.\n\n");
+
+	static int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+
+	int arraySize = sizeof(myArray) / sizeof(myArray[0]);
+
+	for (int i = 0; i < arraySize; i++) {
+		printf("%d ", myArray[i]);
+	}
+
+	printf("\n");
+
 
 
 
@@ -90,6 +104,6 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-int modifyVariable(int *a) {
+void modifyVariable(int *a) {
 	*a = 22;
 }
