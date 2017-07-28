@@ -27,17 +27,30 @@ void functionToCall(int x) {
 struct location {
 	int latitude;
 	int longitude;
-} here;
+} here, where;
+
+struct loc {
+	int latitude;
+	int longitude;
+};
 
 int main(void) {
 
-	struct location there;
+	struct location there, *t;
+	t = &there;
 
 	here.latitude = 20;
 	here.longitude = 30;
 
 	there = here;
 	printf("The location of there is %dn, %de\n\n", there.latitude, there.longitude);
+	printf("The location of where is %dn, %de\n\n", where.latitude, where.longitude);
+
+	t->latitude = 27;
+	t->longitude = 25;
+
+	printf("there location of there is now %dn, %de", (*t).latitude, (*t).longitude);
+	printf("\n\n");
 
 	void (*pFunctionToCall)(int);
 	pFunctionToCall = &functionToCall;
