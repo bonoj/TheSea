@@ -25,6 +25,12 @@ int main(void) {
 
 	printf("%s\n", p);
 
+	int a;
+	scanf("%d", &a);
+	printf("a = %d\n", a);
+
+
+
 	printf("%d\n", EXIT_SUCCESS);
 
 	return EXIT_SUCCESS;
