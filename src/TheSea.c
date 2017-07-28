@@ -16,39 +16,53 @@
 
 int globalVariable = 2;
 
+void modifyVariable(int *a) {
+	*a = 22;
+}
+
+void functionToCall(int x) {
+	printf("functionToCall called on %d", x);
+}
 
 
 int main(void) {
 
-	printf("Now let's play with pointers.\n\n");
+	 void (*pFunctionToCall)(int);
+	 pFunctionToCall = &functionToCall;
 
-	int x = 7, *px;
-	px = &x;
-	*px = x;
+	 pFunctionToCall(2);
+	 printf("\n\n");
 
-	printf("the memory address of x is %d\n", px);
-	printf("x is %d\n", x);
-	printf("x is %d\n", *px);
 
-	printf("\n\n");
+	 printf("Now let's play with pointers.\n\n");
 
-	int y = 10, *py = &y;
+	 int x = 7, *px;
+	 px = &x;
+	 *px = x;
 
-	printf("Let's pass by reference and modify the value at that address!");
-	modifyVariable(&y);
-	printf("%d\n", y);
+	 printf("the memory address of x is %d\n", px);
+	 printf("x is %d\n", x);
+	 printf("x is %d\n", *px);
 
-	printf("\n\nNow let's play with arrays.\n\n");
+	 printf("\n\n");
 
-	static int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	 int y = 10, *py = &y;
 
-	int arraySize = sizeof(myArray) / sizeof(myArray[0]);
+	 printf("Let's pass by reference and modify the value at that address! ");
+	 modifyVariable(&y);
+	 printf("%d\n", y);
 
-	for (int i = 0; i < arraySize; i++) {
+	 printf("\n\nNow let's play with arrays.\n\n");
+
+	 static int myArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+
+	 int arraySize = sizeof(myArray) / sizeof(myArray[0]);
+
+	 for (int i = 0; i < arraySize; i++) {
 		printf("%d ", myArray[i]);
-	}
+	 }
 
-	printf("\n");
+	 printf("\n");
 
 
 
@@ -101,9 +115,7 @@ int main(void) {
 	printf("%d\n", EXIT_SUCCESS);
 	*/
 
-	return EXIT_SUCCESS;
+	 return EXIT_SUCCESS;
 }
 
-void modifyVariable(int *a) {
-	*a = 22;
-}
+
