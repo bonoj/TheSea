@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+#include "TheOcean.h"
+
 int main(void) {
 
 	int x = 5, y = 12, z;
@@ -48,10 +50,11 @@ int main(void) {
 
 	printf("\n");
 
+	printf("Calling add(a,b) from TheOcean.h: 2 + 7 = %d\n", add(2, 7));
 
-	int root = sqrt(9.5);
+	int root = sqrt(9);
 
-	printf("%d\n", root);
+	printf("The square root of 9 is %d\n", root);
 
 
 	printf("%d\n", EXIT_SUCCESS);
