@@ -26,8 +26,16 @@ int main(void) {
 	printf("%s\n", p);
 
 	int a;
-	scanf("%d", &a);
-	printf("a = %d\n", a);
+
+	printf("Input x: ");
+	scanf("%d", &x);
+	printf("%d\n", x);
+
+	if (x == 2) {
+		printf("You found the secret number!\n");
+	}
+
+	printf("x = %d\n", x);
 
 
 
