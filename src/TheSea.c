@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(void) {
 
@@ -24,8 +25,6 @@ int main(void) {
 	//puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
 
 	printf("%s\n", p);
-
-	int a;
 
 	printf("What's the secret number? ");
 
@@ -48,6 +47,12 @@ int main(void) {
 	}
 
 	printf("\n");
+
+
+	int root = sqrt(9.5);
+
+	printf("%d\n", root);
+
 
 	printf("%d\n", EXIT_SUCCESS);
 
