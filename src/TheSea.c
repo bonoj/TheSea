@@ -18,6 +18,20 @@ int globalVariable = 2;
 
 int main(void) {
 
+	printf("Now let's play with pointers.\n\n");
+
+	int x = 7, *px;
+	px = &x;
+	*px = x;
+
+	printf("the memory address of x is %d\n", px);
+	printf("x is %d\n", x);
+	printf("x is %d\n", *px);
+
+
+
+	/*
+
 	int x = 5, y = 12, z;
 
 	z = x + y;
@@ -29,7 +43,6 @@ int main(void) {
 
 	char *p = "Hello World";
 
-	//puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
 
 	printf("%s\n", p);
 
@@ -63,6 +76,7 @@ int main(void) {
 
 
 	printf("%d\n", EXIT_SUCCESS);
+	*/
 
 	return EXIT_SUCCESS;
 }
