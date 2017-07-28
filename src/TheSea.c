@@ -14,12 +14,17 @@
 
 #include "TheOcean.h"
 
+int globalVariable = 2;
+
 int main(void) {
 
 	int x = 5, y = 12, z;
 
 	z = x + y;
 
+	useGlobalVariable();
+
+	printf("%d + %d = %d\n", x, y, z);
 	printf("%d + %d = %d\n", x, y, x + y);
 
 	char *p = "Hello World";
