@@ -27,12 +27,17 @@ int main(void) {
 
 	int a;
 
-	printf("Input x: ");
+	printf("What's the secret number?");
+
+	fflush( stdout );
+
 	scanf("%d", &x);
 	printf("%d\n", x);
 
 	if (x == 2) {
 		printf("You found the secret number!\n");
+	} else {
+		printf("Better luck next time.");
 	}
 
 	printf("x = %d\n", x);
