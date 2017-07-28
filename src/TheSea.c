@@ -16,6 +16,8 @@
 
 int globalVariable = 2;
 
+
+
 int main(void) {
 
 	printf("Now let's play with pointers.\n\n");
@@ -27,6 +29,13 @@ int main(void) {
 	printf("the memory address of x is %d\n", px);
 	printf("x is %d\n", x);
 	printf("x is %d\n", *px);
+
+	printf("\n\n");
+
+	int y = 10, *py = &y;
+
+	modifyVariable(&y);
+	printf("%d\n", y);
 
 
 
@@ -79,4 +88,8 @@ int main(void) {
 	*/
 
 	return EXIT_SUCCESS;
+}
+
+int modifyVariable(int *a) {
+	*a = 22;
 }
