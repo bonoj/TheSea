@@ -27,7 +27,7 @@ int main(void) {
 
 	int a;
 
-	printf("What's the secret number?");
+	printf("What's the secret number? ");
 
 	fflush( stdout );
 
@@ -43,6 +43,11 @@ int main(void) {
 	printf("x = %d\n", x);
 
 
+	for (int i = 0; i < 10; i++) {
+		printf("%d ", i + 1);
+	}
+
+	printf("\n");
 
 	printf("%d\n", EXIT_SUCCESS);
 
