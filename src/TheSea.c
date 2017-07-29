@@ -34,6 +34,8 @@ struct loc {
 	int longitude;
 };
 
+#define MAX(x,y) ((x) > (y) ? (x) : (y))
+
 int main(void) {
 
 	struct location there, *t;
@@ -87,7 +89,17 @@ int main(void) {
 		printf("%d ", myArray[i]);
 	}
 
-	printf("\n");
+	printf("\n\n");
+
+
+	printf("Now let's try a macro...\n\n");
+
+
+	int maxInt = MAX(7,3);
+
+
+	printf("MAX(7,3) = %d\n\n", maxInt);
+
 
 
 
